@@ -36,7 +36,11 @@ export async function GET() {
     try {
         console.log('[JWT API] Reading RSA key...');
         let rsaKey: string | Buffer;
-        if (SNOWFLAKE_RSA_PASSPHRASE !== '' && SNOWFLAKE_RSA_KEY !== '') {
+        if (SNOWFLAKE_RSA_KEY !== '') {
+            console.log('[JWT API] Using RSA key from environment variable');
+            rsaKey = SNOWFLAKE_RSA_KEY;
+            console.log('[JWT API] RSA key loaded from environment');
+        } else if (SNOWFLAKE_RSA_PASSPHRASE !== '') {
             console.log('[JWT API] Decrypting key with passphrase...');
             rsaKey = getDecryptedKey(SNOWFLAKE_RSA_PASSPHRASE);
             console.log('[JWT API] Key decrypted successfully');
