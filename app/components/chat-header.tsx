@@ -15,7 +15,6 @@ import type { Locale } from '@/lib/i18n';
 
 const LANG_ICON = '/icons/lang-ar-an.png';
 const MOI_LOGO = '/icons/MOI_S4_ regular version_V1 1.png';
-const ELLIPSE_8 = '/icons/Ellipse 8.png';
 
 export function ChatHeader() {
   const { locale, setLocale, t } = useLanguage();

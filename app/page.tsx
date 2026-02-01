@@ -95,7 +95,6 @@ export default function Home() {
       >
         <ChatInput
           isLoading={agentState !== AgentApiState.IDLE}
-          messagesLength={messages.length}
           handleSubmit={handleNewMessage}
         />
       </form>

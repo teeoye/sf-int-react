@@ -13,8 +13,6 @@ import { Textarea } from './ui/textarea';
 import { PlusIcon } from './icons';
 import { useLanguage } from '../context/language-context';
 
-const ASK_BUTTON_ICON = '/icons/Frame 2095586325.png';
-
 function MicIcon({ className }: Readonly<{ className?: string }>) {
     return (
         <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -27,12 +25,10 @@ function MicIcon({ className }: Readonly<{ className?: string }>) {
 
 export const ChatInput = ({
     isLoading,
-    messagesLength,
     handleSubmit,
     className,
 }: Readonly<{
     isLoading: boolean;
-    messagesLength: number;
     handleSubmit: (input: string) => void;
     className?: string;
 }>) => {
